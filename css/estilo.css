@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.nav-pc {
+	background: rgb(27, 26, 26);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 2vh 18%;
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+}
+
+.logo {
+	display: flex;
+	height: 8vh;
+	width: 18vh;
+	align-items: center;
+	cursor: pointer;
+	margin-right: auto;
+}
+
+.logo img {
+	width: 80px;
+	height: 80px;
+}
+
+.links a {
+	color: white;
+	text-decoration: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+.links a:hover {
+	color: #6a0cdd;
+}
+
+.container_menu {
+	cursor: pointer;
+	display: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: white;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	transform: translate(0, -11px) rotate(45deg);
+}
+
+.nav_cell {
+	background: rgb(27, 26, 26);
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.nav_cell ul {
+	list-style-type: none;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.nav_cell li {
+	width: 100%;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav_cell li a {
+	color: white;
+	text-decoration: none;
+	font-size: 30px;
+	text-align: center;
+}
+
+.slideDown {
+	visibility: visible;
+	transition: all 1s;
+	opacity: 1;
+	height: 450px;
+	padding-top: 85px;
+}
+
+.slideUp {
+	transition: all 1s;
+	visibility: hidden;
+	opacity: 0;
+	height: 0px;
+}
+
+header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 700px;
+	padding: 0px 20%;
+}
+
+.nome-content {
+	font-size: 1rem;
+	flex: 50%;
+	margin-bottom: 50px;
+}
+
+.nome {
+	font-size: 60px;
+}
+
+.animaDigito {
+	margin-left: 20px;
+	font-size: 60px;
+}
+
+.button {
+	display: inline-block;
+	background-image: linear-gradient(55deg, #ca46fa 0, #a02eed 25%, #6a0cdd 50%, #0000cd 75%, #0000c0 100%);
+	color: white;
+	text-decoration: none;
+	padding: 10px 30px;
+	border-radius: 20px;
+	font-weight: bold;
+	transition: all 2s ease;
+}
+
+.button:hover {
+	color: black;
+	background-image: linear-gradient(25deg, #ff9055 0, #ff7e53 16.67%, #ff674e 33.33%, #f94646 50%, #e91540 66.67%, #dd0040 83.33%, #d40044 100%);
+}
+
+.hide {
+	transition: 1s;
+	opacity: 0;
+}
+
+.z-index-1 {
+	z-index: -1 !important;
+}
+
+.perfil {
+	flex: 50%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.perfil img {
+	width: 70%;
+}
+
+#sobre-mim {
+	display: grid;
+	grid-template-columns: 40% 40%;
+	gap: 200px;
+	padding: 15% 15%;
+	margin-top: 80px;
+	align-items: center;
+	background: white;
+	;
+}
+
+.sobre-img img {
+	width: 100%;
+	height: 100%;
+}
+
+.sobre-text {
+	display: flex;
+	background: rgb(27, 26, 26);
+	padding: 0px 30px;
+	align-items: center;
+	font-size: 30px;
+	text-indent: 30px;
+	border-radius: 20px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+
+#projetos {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	padding: 15% 15%;
+	background: rgb(27, 26, 26);
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 70px;
+	align-items: center;
+}
+
+.card {
+	display: grid;
+	grid-template-rows: 30% 70%;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	height: 350px;
+	width: 300px;
+	border-radius: 20px;
+	background: white;
+	text-align: center;
+	font-size: 30px;
+	transition: all 0.3s ease;
+}
+
+.card:hover {
+	height: 400px;
+	width: 350px;
+	cursor: pointer;
+}
+
+#habilidades {
+	display: grid;
+	grid-template-columns: auto;
+	padding: 15% 15%;
+	justify-content: center;
+	background: white;
+	transform: translate3d(0, 19px, 0);
+}
+
+#habilidades h2 {
+	text-align: center;
+	font-size: 50px;
+	margin-bottom: 100px;
+	color: rgb(27, 26, 26);
+}
+
+.o-habilidades {
+	margin-top: 150px;
+}
+
+.skill-imgs {
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+.skill-imgs img {
+	width: 60%;
+	cursor: pointer;
+	justify-self: center;
+}
+
+.skill-imgs img:hover {
+	filter: brightness(150%)
+}
+
+footer {
+	background: rgb(27, 26, 26);
+	color: white;
+	padding: 0 10%;
+	padding-top: 10px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+footer h3 {
+	margin-bottom: 0;
+}
+
+[data-anime] {
+	opacity: 0;
+	transition: 0.3s;
+}
+
+[data-anime="left"] {
+	transform: translate3d(-50px, 0, 0)
+}
+
+[data-anime="top"] {
+	transform: translate3d(0, -50px, 0)
+}
+
+[data-anime="right"] {
+	transform: translate3d(50px, 0, 0)
+}
+
+[data-anime].animate {
+	opacity: 1;
+	transform: translate3d(0, 0, 0)
+}
+
+.fundo {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 10;
+	transition: all 1s;
+}
+
+.modal {
+	background: white;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0 2%;
+	border-radius: 10px;
+	width: 400px;
+	max-width: 80%;
+	transition: all 1s;
+	z-index: 10;
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.modal-header span {
+	color: red;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 900px) {
+	.links {
+		display: none;
+	}
+
+	.container_menu {
+		display: block;
+	}
+
+	.perfil {
+		display: none;
+	}
+
+	#sobre-mim {
+		grid-template-columns: 100%;
+	}
+
+	.cards {
+		grid-template-columns: 100%;
+	}
+
+	.skill-imgs {
+		grid-template-columns: auto;
+		gap: 70px;
+	}
+
+}
+
+@media only screen and (min-width: 900px) {
+	.nav_cell {
+		transition: 1s;
+		opacity: 0;
+		visibility: hidden;
+		height: 0px !important;
+	}
+}
+
+@media only screen and (min-width: 900px) and (max-width:1000px) {
+	.cards {
+		grid-template-columns: 100%;
+	}
+}
+
+@media only screen and (min-width: 1000px) and (max-width:1200px) {
+	.cards {
+		grid-template-columns: 50% 50%;
+	}
+}

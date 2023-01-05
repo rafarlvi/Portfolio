@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+	<nav class="nav-pc">
+		<div class="logo">
+			<img src="img/letra-t.png" alt="logo">
+		</div>
+		<div class="links">
+			<a href="#inicio">Início</a>
+			<a href="#sobre-mim">Sobre mim</a>
+			<a href="#projetos">Projetos</a>
+			<a href="#habilidades">Habilidades</a>
+		</div>
+		<div class="container_menu" onclick="menu(this),slideMenu()">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+	</nav>
+	<nav class="nav_cell slideUp">
+		<ul>
+
+			<li><a href="#inicio">Início</a></li>
+			<li><a href="#sobre-mim">Sobre mim</a></li>
+			<li><a href="#projetos">Projetos</a></li>
+			<li><a href="#habilidades">Habilidades</a></li>
+		</ul>
+	</nav>
+	<header id="inicio">
+		<div class="nome-content" data-anime="left">
+			<h1>Olá, meu nome é
+				<br><span class="nome">Rafael Victor</span>
+				<span class="animaDigito"></span><br>
+				Desenvolvedor Front-end
+			</h1>
+			<a href="#" class="button">GitHub</a>
+		</div>
+		<div class="perfil" data-anime="right">
+			<img src="img/user.png" alt="desenho do perfil">
+		</div>
+	</header>
+	<section id="sobre-mim">
+		<div class="sobre-img" data-anime="left">
+			<img src="img/sobre.png" alt="avatar de perfil">
+		</div>
+		<div class="sobre-text" data-anime="right">
+			<p>Meu nome é Thomas Kelner e amo tecnologia. Essa paixão despertou em 2020, quando assisti uma série
+				chamada <cite>Mr.Robot</cite>, onde um hacker "justiceiro" é o protagonista. Desde então venho apredendo
+				sobre diversas tecnologias.</p>
+		</div>
+	</section>
+
+	<section id="projetos">
+		<div class="cards">
+			<div class="card" data-anime="left">
+				<div class="header"></div>
+				<div class="card-text">Em breve</div>
+			</div>
+			<div class="card" data-anime="top">
+				<div class="header"></div>
+				<div class="card-text">Em breve</div>
+			</div>
+			<div class="card" data-anime="right">
+				<div class="header"></div>
+				<div class="card-text">Em breve</div>
+			</div>
+
+			<div class="card" data-anime="left">
+				<div class="header"></div>
+				<div class="card-text">Em breve</div>
+			</div>
+			<div class="card" data-anime="top">
+				<div class="header"></div>
+				<div class="card-text">Em breve</div>
+			</div>
+			<div class="card" data-anime="right">
+				<div class="header"></div>
+				<div class="card-text">Em breve</div>
+			</div>
+	</section>
+
+	<section id="habilidades">
+		<div>
+			<h2>FRONT SKILLS (CLIQUE NO ICONE PARA MAIS INFORMAÇÕES)</h2>
+		</div>
+		<div class="skill-imgs">
+			<img id="html" src="img/html-5.png" alt="icone html" data-anime="left">
+			<img id="css" src="img/css-3.png" alt="css icone" data-anime="top">
+			<img id="js" src="img/script-java.png" data-anime="right" alt="javascript icone">
+		</div>
+		<div class="o-habilidades">
+			<h2>OUTRAS HABILIDADES</h2>
+		</div>
+		<div class="skill-imgs">
+			<img id="git" src="img/git.png" alt="git icone" data-anime="left">
+			<img id="github" src="img/github-sign.png" alt="github icone" data-anime="right">
+		</div>
+	</section>
+	<footer>
+		<h3>Feito por Thomas Kelner</h3>
+		<h3>Email para contato: thoomy901@gmail.com</h3>
+		<h3>Logo feita por Laisa Islam Ani</h3>
+	</footer>
+
+	<!--Modal-->
+	<div class="fundo hide z-index-1"></div>
+	<div class="modal hide z-index-1">
+		<div class="modal-header">
+			<h3>Javascript</h3>
+			<span onclick="addHide()">X</span>
+		</div>
+		<div class="modal-content">
+			<p>JavaScript é uma linguagem de programação interpretada estruturada, de script em alto
+				nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das
+				três
+				principais tecnologias da World Wide Web.</p>
+		</div>
+	</div>
+
+	<script src="js/index.js"></script>
+</body>
+
+</html>
