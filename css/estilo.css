@@ -188,7 +188,6 @@ header {
 	margin-top: 80px;
 	align-items: center;
 	background: white;
-	;
 }
 
 .sobre-img img {
@@ -225,22 +224,33 @@ header {
 }
 
 .card {
-	display: grid;
-	grid-template-rows: 30% 70%;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-	height: 350px;
-	width: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 195px;
+	width: 310px;
 	border-radius: 20px;
 	background: white;
 	text-align: center;
 	font-size: 30px;
+	overflow: hidden;
 	transition: all 0.3s ease;
+	cursor: pointer;
 }
 
 .card:hover {
-	height: 400px;
-	width: 350px;
-	cursor: pointer;
+	height: 215px;
+	width: 330px;
+	transform: scale(0.5)
+}
+
+.embreve {
+	background: yellow;
+	width: 1000px;
+	height: 50px;
+	padding: 7px 0;
+	transform: rotate(-50deg);
+	position: relative;
 }
 
 #habilidades {
@@ -254,28 +264,64 @@ header {
 
 #habilidades h2 {
 	text-align: center;
-	font-size: 50px;
-	margin-bottom: 100px;
-	color: rgb(27, 26, 26);
+	font-size: 30px;
+	color: white;
 }
 
-.o-habilidades {
-	margin-top: 150px;
+.text-skills {
+	background: rgb(27, 26, 26);
+	border-radius: 50px;
+	padding: 0px 40px;
+	margin-bottom: 100px;
+	position: relative;
+}
+
+.text-skills::after {
+	content: '';
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 50%;
+	bottom: -15px;
+	transform: rotate(45deg) translate(-50%);
+	background: rgb(27, 26, 26);
 }
 
 .skill-imgs {
-	display: grid;
-	grid-template-columns: auto auto auto;
+	display: flex;
+	justify-content: center;
+	gap: 150px;
 }
 
-.skill-imgs img {
-	width: 60%;
+.skill-imgs i {
+	font-size: 200px;
 	cursor: pointer;
-	justify-self: center;
+	transition: all 0.7s;
 }
 
-.skill-imgs img:hover {
-	filter: brightness(150%)
+.skill-imgs i:hover {
+	font-size: 210px;
+
+}
+
+#html:hover {
+	color: orangered
+}
+
+#css:hover {
+	color: rgb(0, 136, 255);
+}
+
+#js:hover {
+	color: yellow;
+}
+
+#git:hover {
+	color: orangered;
+}
+
+#github:hover {
+	color: rgb(0, 136, 255);
 }
 
 footer {
@@ -298,20 +344,24 @@ footer h3 {
 }
 
 [data-anime="left"] {
-	transform: translate3d(-50px, 0, 0)
+	transform: rotate(0deg) translate3d(-50px, 0, 0)
 }
 
 [data-anime="top"] {
-	transform: translate3d(0, -50px, 0)
+	transform: rotate(0deg) translate3d(0, -50px, 0)
 }
 
 [data-anime="right"] {
-	transform: translate3d(50px, 0, 0)
+	transform: rotate(0deg) translate3d(50px, 0, 0)
 }
 
 [data-anime].animate {
 	opacity: 1;
-	transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0);
+}
+
+i[data-anime].animate {
+	transform: rotate(-360deg) translate3d(0, 0, 0);
 }
 
 .fundo {
@@ -373,7 +423,9 @@ footer h3 {
 	}
 
 	.skill-imgs {
-		grid-template-columns: auto;
+		display: flex;
+		flex-flow: column;
+		align-items: center;
 		gap: 70px;
 	}
 

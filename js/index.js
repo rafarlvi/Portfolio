@@ -40,7 +40,7 @@ function animeScroll() {
 	target.forEach(function (item) {
 		let dis = item.offsetTop;
 		if (item == html || item == css || item == js || item == git || item == github) {
-			dis += 2875;
+			dis += 2600;
 		}
 
 		if (windowTop > dis) {
